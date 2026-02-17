@@ -283,7 +283,9 @@ public extension Vocos {
             weights[key] = value
         }
         let parameters = ModuleParameters.unflattened(weights)
-        try vocos.update(parameters: parameters, verify: [.all])
+        // NOTE: Using .noUnusedKeys because filterbank was extracted from weights
+        // and passed to constructor separately (line 269)
+        try vocos.update(parameters: parameters, verify: [.noUnusedKeys])
         
         return vocos
     }

@@ -12,8 +12,8 @@ let package = Package(
             targets: ["Vocos"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ml-explore/mlx-swift", from: "0.18.0"),
-        .package(url: "https://github.com/huggingface/swift-transformers", from: "0.1.13"),
+        .package(url: "https://github.com/ml-explore/mlx-swift", from: "0.29.0"),
+        .package(url: "https://github.com/huggingface/swift-transformers", .upToNextMinor(from: "1.1.0")),
     ],
     targets: [
         .target(
