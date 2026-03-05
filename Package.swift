@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "vocos-swift",
-    platforms: [.macOS(.v14), .iOS(.v16)],
+    platforms: [.macOS(.v14), .iOS(.v17)],
     products: [
         .library(
             name: "Vocos",
